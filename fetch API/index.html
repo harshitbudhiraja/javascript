@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="fetchMethod"></p>
+    <p id="fetchMethod2"></p>
+
+    <script>
+        //     https://api.covidtracking.com/v1/states/current.json
+        https://corona.lmao.ninja/v2/countries?yesterday&sort    
+        fetch('https://corona.lmao.ninja/v2/countries?yesterday&sort').then( (apidata) =>{
+            // console.log(apidata);
+            return apidata.json();
+        })
+        .then( (apidatas) =>{
+            
+            const mydata = `country name : ${apidatas[0].country} ,  Total cases : ${apidatas[0].cases}`;
+            const mydata2 = `country name : ${apidatas[1].country} ,  Total cases : ${apidatas[1].cases}`;
+            
+            document.getElementById('fetchMethod').innerHTML = mydata;
+            document.getElementById('fetchMethod2').innerHTML = mydata2;
+
+        })
+        .catch((err) =>{
+            console.log(`Error occured , description : ${error}`);
+        })
+        
+
+        
+    </script>
+
+
+</body>
+</html>
