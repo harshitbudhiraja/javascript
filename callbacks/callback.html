@@ -1,0 +1,46 @@
+<!--  
+    In javascript we can pass functions as parameters/argument.
+    A function that is to be executed after another function has finished executing   
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        
+        <p id = "cb1"></p>
+        <p id = "cb"></p>
+
+        
+    </div>
+    
+    <script>
+
+        //Callback 
+        const perOne = (friend) =>{
+        
+            document.getElementById('cb1').innerHTML = "this is person two calling";
+            friend();
+        }
+
+        const perTwo  = () =>{
+            
+            document.getElementById('cb').innerHTML = "Hey , its me i am busy right now";
+
+        }
+
+        perOne(perTwo);
+
+
+    </script>
+
+
+</body>
+</html>
