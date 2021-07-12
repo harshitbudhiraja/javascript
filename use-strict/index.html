@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        
+        "use strict"
+
+        // 1. Use strict doesnot allow variable initialization without declaration.
+        // 2. Use strict doesnot allow to initialize duplicate parameters with same name.
+        
+        function add(a,b){
+            ans = a+b;
+            console.log(ans);
+        }
+
+        function square(a,a){
+            var ans = a*a;
+            console.log(ans);
+        }
+
+        add(10,20);
+        square(12,15);
+
+    </script>
+    
+</body>
+</html>
